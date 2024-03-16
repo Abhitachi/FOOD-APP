@@ -31,7 +31,7 @@ const ItemList = (props) => {
                  </div>
                  <div className="w-4/12 md:w-3/12 p-2 md:p-4 relative">
                     <div className="absolute p-1 md:p-2 bottom-0 left-1/2 transform -translate-x-1/2">
-                   {cart? <div className="flex md:flex gap-3"><span className="bg-green-400 px-2 py-0 md:px-3 text-white text-xs md:text-xl shadow-sm md:shadow-md font-bold md:font-extrabold rounded-xs md:rounded-md" onClick={() => {handleAddItem(item)}}>+</span> <span className="bg-red-400 text-white font-extrabold text-xs md:text-2xl shadow-sm md:shadow-md px-[10px] md:px-3 py-0 rounded-sm md:rounded-md" onClick={() => {handleRemoveItem(item)}}>-</span></div> :   <button className="bg-whit shadow-md text-sm md:text-lg md:shadow-lg py-1 px-2 md:px-4 text-green-400 font-bold  bg-white rounded-md hover:animate-pulse " onClick={() => handleAddItem(item)}>ADD</button>}
+                   {cart? <div className="flex md:flex gap-3"><span className="bg-green-400 px-2 py-0 md:px-3 text-white text-xs md:text-xl shadow-sm md:shadow-md font-bold md:font-extrabold cursor-pointer rounded-xs md:rounded-md" onClick={() => {handleAddItem(item)}}>+</span> <span className="bg-red-400 text-white font-extrabold text-xs md:text-2xl shadow-sm md:shadow-md px-[10px] md:px-3 py-0 cursor-pointer rounded-sm md:rounded-md" onClick={() => {handleRemoveItem(item)}}>-</span></div> :   <button className="bg-whit shadow-md text-sm md:text-lg md:shadow-lg py-1 px-2 md:px-4 text-green-400 font-bold  bg-white rounded-md hover:animate-pulse " onClick={() => handleAddItem(item)}>ADD</button>}
                     </div>  
                     <img src={ITEM_IMG_CDN_URL + item?.card?.info?.imageId} alt=""  className="rounded-md"/>
                  </div>
